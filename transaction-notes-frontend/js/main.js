@@ -11,7 +11,7 @@ document.getElementById("addNote").addEventListener("click", async () => {
 
   try {
     // Send POST request to the backend
-    const response = await fetch("http://127.0.0.1:8081/add-note", {
+    const response = await fetch("https://transaction-notes-apirenderer.onrender.com/add-note", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,15 +22,14 @@ document.getElementById("addNote").addEventListener("click", async () => {
     // Parse the response
     if (response.ok) {
       const data = await response.json();
-      document.getElementById("output").innerText = data.message;
+      document.getElementById("output").innerText = data.message || "Note added successfully!";
     } else {
       const error = await response.json();
       document.getElementById("output").innerText = error.error || "Failed to add note.";
     }
   } catch (error) {
-    console.log(response);
-    //console.error("Error adding note:", error);
-    //document.getElementById("output").innerText = "An error occurred while adding the note. Here.";
+    console.error("Error adding note:", error);
+    document.getElementById("output").innerText = "An error occurred while adding the note.";
   }
 });
 
@@ -46,7 +45,7 @@ document.getElementById("getNote").addEventListener("click", async () => {
 
   try {
     // Send GET request to the backend
-    const response = await fetch(`http://127.0.0.1:8081/get-note?txHash=${txHash}`);
+    const response = await fetch(`https://transaction-notes-apirenderer.onrender.com/get-note?txHash=${txHash}`);
 
     // Parse the response
     if (response.ok) {
