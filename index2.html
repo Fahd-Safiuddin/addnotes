@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe{Wallet} - Transactions</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, p, a, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6fa;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Header */
+        .header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header nav a {
+            margin-left: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .sidebar ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Transactions Section */
+        .transactions {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .transactions h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .transaction-card {
+            border: 1px solid #e5e5e5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .transaction-card h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .transaction-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .transaction-status {
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-completed {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .status-pending {
+            background-color: #ffc107;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Safe{Wallet}</h1>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Assets</a>
+            <a href="#">Transactions</a>
+            <a href="#">Settings</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <ul>
+                <li><a href="#">All Transactions</a></li>
+                <li><a href="#">Completed</a></li>
+                <li><a href="#">Pending</a></li>
+                <li><a href="#">By Date</a></li>
+            </ul>
+        </aside>
+
+        <!-- Transactions Section -->
+        <section class="transactions">
+            <h2>Transaction History</h2>
+
+            <div class="transaction-card">
+                <div>
+                    <h4>0x123...abc</h4>
+                    <p>Amount: 1.5 ETH</p>
+                    <p>Date: 2023-12-01</p>
+                </div>
+                <div class="transaction-status status-completed">Completed</div>
+            </div>
+
+            <div class="transaction-card">
+                <div>
+                    <h4>0x456...def</h4>
+                    <p>Amount: 0.8 ETH</p>
+                    <p>Date: 2023-12-02</p>
+                </div>
+                <div class="transaction-status status-pending">Pending</div>
+            </div>
+
+            <div class="transaction-card">
+                <div>
+                    <h4>0x789...ghi</h4>
+                    <p>Amount: 2.3 ETH</p>
+                    <p>Date: 2023-12-03</p>
+                </div>
+                <div class="transaction-status status-completed">Completed</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

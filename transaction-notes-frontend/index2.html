@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe{Wallet} - Add Note</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, p, a, input, button, textarea {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6fa;
+            color: #333;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header nav a {
+            margin-right: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header nav a:last-child {
+            margin-right: 0;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add Note Form */
+        .add-note-section {
+            margin-bottom: 40px;
+        }
+
+        .add-note-section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Static Display Sections */
+        .static-section {
+            margin-top: 20px;
+        }
+
+        .static-section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .static-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Safe{Wallet}</h1>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Assets</a>
+            <a href="#">Transactions</a>
+            <a href="#">Settings</a>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Add Note Feature -->
+        <div class="add-note-section">
+            <h2>Add Transaction Note</h2>
+            <div class="form-group">
+                <label for="txHash">Transaction Hash</label>
+                <input type="text" id="txHash" placeholder="Enter transaction hash">
+            </div>
+            <div class="form-group">
+                <label for="note">Note</label>
+                <textarea id="note" placeholder="Enter your note"></textarea>
+            </div>
+            <button class="btn" id="addNote">Add Note</button>
+            <div class="form-group" id="output" style="margin-top: 15px;"></div>
+        </div>
+
+        <!-- Static Content Sections -->
+        <div class="static-section">
+            <h3>Recent Transactions</h3>
+            <p>Static content: Display recent transactions here.</p>
+        </div>
+
+        <div class="static-section">
+            <h3>Wallet Balance</h3>
+            <p>Static content: Display wallet balance here.</p>
+        </div>
+
+        <div class="static-section">
+            <h3>Settings</h3>
+            <p>Static content: Placeholder for wallet settings.</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
